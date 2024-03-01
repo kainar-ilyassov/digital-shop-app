@@ -8,7 +8,7 @@ const perks = [
     name: "Instant Delivery",
     Icon: ArrowDownToLine,
     description:
-      "Get your assets delivered to your email in seconds and download them right away",
+      "Get your assets delivered to your email in seconds and download them right away.",
   },
   {
     name: "Guaranteed Quality",
