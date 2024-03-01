@@ -12,6 +12,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Icons } from "@/components/icons";
+import { trpc } from "@/trpc/client";
 
 const Page = () => {
   const {
@@ -22,8 +23,10 @@ const Page = () => {
     resolver: zodResolver(FormSchema),
   });
 
-  const onFormSubmit = (value: TFormShemaType) => {
-    console.log(value);
+  const { mutate, isLoading } = trpc.auth.createPayloadUser.useMutation({});
+
+  const onFormSubmit = ({ email, password }: TFormShemaType) => {
+    mutate({ email, password });
   };
 
   return (
