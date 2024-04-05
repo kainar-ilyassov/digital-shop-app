@@ -67,6 +67,6 @@
 
 .swiper-pagination-bullet-active {
   color: #fff;
-  background: #fff !important;
-  scale: 1 !important;
+  background: white !important;
+  scale: 1 !important ;
 }
